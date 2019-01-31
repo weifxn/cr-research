@@ -132,20 +132,36 @@ https://www.precisionmicrodrives.com/content/dc-motor-speed-voltage-and-torque-r
 |C Rating| ?? | 45C (45 x 5.2 = 234A)|
 
 ### Calculations for 2 batteries (3S 5200mAh)
-**22.2V**  = 11.1V x 2 batteries
+```
+22.2V  = 11.1V x 2 batteries
 
-**10,400mAh** = 5200mAh x 2 batteries
+10,400mAh = 5200mAh x 2 batteries
+```
 
 ### Assuming using 2 motors (450W)
 #### Total runtime (critical condition)
+```
 53A = 26.5A x 2 motors
 
-0.19 hour = 10.4Ah(Capacity)/53A
+0.19 hour = 10.4Ah(Capacity of 2 batteries)/53A
 
 11.4 minutes = 0.19 hour x 60
+```
 
 #### Safe Voltage
+```
 22.2V (Batteries) < 24V (Motor)
+```
+
+### Assuming 4 motors (350W)
+```
+72A = 18A x 4 motors
+
+0.14 hour = 10.4Ah(Capacity of 2 batteries)/72A
+
+8.4 minutes = 0.14 hour x 60
+```
+
 
 ## Definition
 
@@ -163,5 +179,15 @@ sources: [1](https://rogershobbycenter.com/lipoguide/)
 - C in C Rating stands for **capacity**
 - 30C = 30 x Capacity(in Amps)
 - Going higher than that will degrade the battery faster than normal
+
+# Comparison (4x350W vs 2x450W)
+
+| | 4 x 350W | 2 x 450W |
+| ---- |-------------------| -----| 
+|Price|  RM600 (RM150 x 4) | RM658 (RM329 x 2) |
+|Voltage| 24V | 3S (3.7V x 3 = 11.1V) |
+|Total runtime| 8.4 minutes| 11.4 minutes|
+|Torque| 4.8Nm (1.2Nm x 4) | 22Nm (11Nm x 2) |
+|Speed| 2600RPM | 395RPM |
 
 
